@@ -21,20 +21,20 @@
                 </a>
             </div>
             <div class="col-6 d-flex justify-content-end align-items-center">
-                <button class="btn my-2 my-sm-0" type="submit">Connect Wallet</button>
+                <button class="c-btn btn my-2 my-sm-0" type="submit">Connect Wallet</button>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="widget-wrapper">
                     <div class="row d-flex justify-content-center align-items-center" style="min-height: 80vh">
-                        <div class="col-md-10">
+                        <div class="col-md-5">
                             <div class="widget">
                                 <div class="row widget-form">
                                     <div class="col-md-6">
-                                        <label>You pay:</label>
+                                        <label class="label-one">You pay:</label>
                                         <input type="number" value="0">
                                     </div>
                                     <div class="col-md-6 d-flex justify-content-end align-items-end">
@@ -55,7 +55,7 @@
                                 </div>
                                 <div class="row widget-form">
                                     <div class="col-md-4">
-                                        <label>You receive:</label>
+                                        <label class="label-one">You receive:</label>
                                         <input type="number" value="0">
                                     </div>
                                     <div class="col-md-8 d-flex justify-content-end align-items-end">
@@ -72,22 +72,38 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="row widget-form d-flex justify-content-center">
+                                    <ul>
+                                        <li><input type="radio" name="test" id="cb1" />
+                                            <label for="cb1">X2</label>
+                                        </li>
+                                        <li><input type="radio" name="test" id="cb2" />
+                                            <label for="cb2">X5</label>
+                                        </li>
+                                        <li><input type="radio" name="test" id="cb3" />
+                                            <label for="cb3">X10</label>
+                                        </li>
+                                    </ul>
+                                    <button class="c-btn btn my-2 my-sm-0" type="submit">Confirm</button>
+                                </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
             </div>
             <div class="col-md-6">
-                <div class="widget-wrapper">
-                    <div class="row d-flex justify-content-center align-items-center" style="min-height: 80vh">
-                        <div class="col-md-6">
-                            <iframe width="500" height="440"
-                                    src="https://widgets-uniswap.vercel.app/_renderer.html?_fixtureId=%7B%22path%22%3A%22src%2Fcosmos%2FSwap.fixture.tsx%22%2C%22name%22%3Anull%7D"
-                                    frameborder="0"></iframe>
-                        </div>
-                    </div>
-                </div>
+<!--                <div class="widget-wrapper">-->
+<!--                    <div class="row d-flex justify-content-center align-items-center" style="min-height: 80vh">-->
+<!--                        <div class="col-md-6">-->
+<!--                            <iframe width="500" height="440"-->
+<!--                                    src="https://widgets-uniswap.vercel.app/_renderer.html?_fixtureId=%7B%22path%22%3A%22src%2Fcosmos%2FSwap.fixture.tsx%22%2C%22name%22%3Anull%7D"-->
+<!--                                    frameborder="0"></iframe>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
 
             </div>
 
