@@ -14,7 +14,7 @@
 <body>
 <main>
     <div class="container nav-bar">
-        <div class="row ">
+        <div class="row">
             <div class="col-md-6">
                 <a href="#">
                     <img src="https://getlambo.xyz/images/256.png" width="90px">
@@ -25,55 +25,72 @@
             </div>
         </div>
     </div>
-    <div class="widget-wrapper">
-        <div class="row d-flex justify-content-center align-items-center" style="min-height: 80vh">
-            <div class="col-md-4">
-                <div class="widget">
-                    <div class="row widget-form">
-                        <div class="col-md-6">
-                            <label>You pay:</label>
-                            <input type="number" value="0">
-                        </div>
-                        <div class="col-md-6 d-flex justify-content-end align-items-end">
-                            <div class="select">
-                                <select>
-                                    <option value="1">ETH</option>
-                                    <option value="2">DAI</option>
-                                    <option value="3">USDC</option>
-                                    <option value="4">USDT</option>
-                                    <option value="5">WBTC</option>
-                                    <option value="6">WETH</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center arrows">
-                        <img src="images/arrows.png" alt="">
-                    </div>
-                    <div class="row widget-form">
-                        <div class="col-md-4">
-                            <label>You receive:</label>
-                            <input type="number" value="0">
-                        </div>
-                        <div class="col-md-8 d-flex justify-content-end align-items-end">
-                            <div class="select">
-                                <select>
-                                    <option value="1">Select Token</option>
-                                    <option value="1">ETH</option>
-                                    <option value="2">DAI</option>
-                                    <option value="3">USDC</option>
-                                    <option value="3">USDT</option>
-                                    <option value="3">WBTC</option>
-                                    <option value="3">WETH</option>
-                                </select>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="widget-wrapper">
+                    <div class="row d-flex justify-content-center align-items-center" style="min-height: 80vh">
+                        <div class="col-md-10">
+                            <div class="widget">
+                                <div class="row widget-form">
+                                    <div class="col-md-6">
+                                        <label>You pay:</label>
+                                        <input type="number" value="0">
+                                    </div>
+                                    <div class="col-md-6 d-flex justify-content-end align-items-end">
+                                        <div class="select">
+                                            <select>
+                                                <option value="1">ETH</option>
+                                                <option value="2">DAI</option>
+                                                <option value="3">USDC</option>
+                                                <option value="4">USDT</option>
+                                                <option value="5">WBTC</option>
+                                                <option value="6">WETH</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center arrows">
+                                    <img src="images/arrows.png" alt="">
+                                </div>
+                                <div class="row widget-form">
+                                    <div class="col-md-4">
+                                        <label>You receive:</label>
+                                        <input type="number" value="0">
+                                    </div>
+                                    <div class="col-md-8 d-flex justify-content-end align-items-end">
+                                        <div class="select">
+                                            <select>
+                                                <option value="1">Select Token</option>
+                                                <option value="1">ETH</option>
+                                                <option value="2">DAI</option>
+                                                <option value="3">USDC</option>
+                                                <option value="3">USDT</option>
+                                                <option value="3">WBTC</option>
+                                                <option value="3">WETH</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-<!--                <iframe width="500" height="440"-->
-<!--                        src="https://widgets-uniswap.vercel.app/_renderer.html?_fixtureId=%7B%22path%22%3A%22src%2Fcosmos%2FSwap.fixture.tsx%22%2C%22name%22%3Anull%7D"-->
-<!--                        frameborder="0"></iframe>-->
+
             </div>
+            <div class="col-md-6">
+                <div class="widget-wrapper">
+                    <div class="row d-flex justify-content-center align-items-center" style="min-height: 80vh">
+                        <div class="col-md-6">
+                            <iframe width="500" height="440"
+                                    src="https://widgets-uniswap.vercel.app/_renderer.html?_fixtureId=%7B%22path%22%3A%22src%2Fcosmos%2FSwap.fixture.tsx%22%2C%22name%22%3Anull%7D"
+                                    frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </div>
 </main>
