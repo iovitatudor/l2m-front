@@ -17,6 +17,10 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Oxygen, Fira Sans, Droid Sans, sans-serif;
 }
 
+main {
+    overflow: hidden;
+}
+
 .nav-bar {
     margin-top: 10px;
 }
