@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>L2M</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+<main>
+    <div class="container nav-bar">
+        <div class="row ">
+            <div class="col-md-6">
+                <a href="#">
+                    <img src="https://getlambo.xyz/images/256.png" width="90px">
+                </a>
+            </div>
+            <div class="col-md-6 d-flex justify-content-end align-items-center">
+                <button class="btn my-2 my-sm-0" type="submit">Connect Wallet</button>
+            </div>
+        </div>
+    </div>
+    <div class="widget-wrapper">
+        <div class="row d-flex justify-content-center align-items-center" style="min-height: 80vh">
+            <div class="col-md-4">
+                <div class="widget">
+                    <div class="row widget-form">
+                        <div class="col-md-6">
+                            <label>You pay:</label>
+                            <input type="number" value="0">
+                        </div>
+                        <div class="col-md-6 d-flex justify-content-end align-items-end">
+                            <div class="select">
+                                <select>
+                                    <option value="1">ETH</option>
+                                    <option value="2">DAI</option>
+                                    <option value="3">USDC</option>
+                                    <option value="4">USDT</option>
+                                    <option value="5">WBTC</option>
+                                    <option value="6">WETH</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center arrows">
+                        <img src="images/arrows.png" alt="">
+                    </div>
+                    <div class="row widget-form">
+                        <div class="col-md-4">
+                            <label>You receive:</label>
+                            <input type="number" value="0">
+                        </div>
+                        <div class="col-md-8 d-flex justify-content-end align-items-end">
+                            <div class="select">
+                                <select>
+                                    <option value="1">Select Token</option>
+                                    <option value="1">ETH</option>
+                                    <option value="2">DAI</option>
+                                    <option value="3">USDC</option>
+                                    <option value="3">USDT</option>
+                                    <option value="3">WBTC</option>
+                                    <option value="3">WETH</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!--                <iframe width="500" height="440"-->
+<!--                        src="https://widgets-uniswap.vercel.app/_renderer.html?_fixtureId=%7B%22path%22%3A%22src%2Fcosmos%2FSwap.fixture.tsx%22%2C%22name%22%3Anull%7D"-->
+<!--                        frameborder="0"></iframe>-->
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
