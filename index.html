@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>L2M</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.9.0/dist/web3.min.js"></script>
+    <!--    <link rel="icon" href="./favicon.ico" type="image/x-icon">-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/main.css?mvlfdmvlfm">
@@ -21,7 +21,8 @@
                 </a>
             </div>
             <div class="col-6 d-flex justify-content-end align-items-center">
-                <button class="c-btn btn my-2 my-sm-0" type="submit">Connect Wallet</button>
+                <button class="c-btn btn my-2 my-sm-0" type="submit" id="connectWallet">Connect Wallet</button>
+                <span id="account-id"></span>
             </div>
         </div>
     </div>
@@ -35,49 +36,52 @@
                                 <div class="row widget-form">
                                     <div class="col-9">
                                         <label class="label-one">Your investment amount:</label>
-                                        <input type="number" value="0">
+                                        <input type="number" value="0" id="invest-value">
                                     </div>
                                     <div class="col-3 d-flex justify-content-end align-items-end">
                                         <p>ETH</p>
                                     </div>
                                 </div>
-<!--                                <div class="text-center arrows">-->
-<!--                                    <img src="images/arrows.png" alt="">-->
-<!--                                </div>-->
-<!--                                <div class="row widget-form">-->
-<!--                                    <div class="col-md-4">-->
-<!--                                        <label class="label-one">You receive:</label>-->
-<!--                                        <input type="number" value="0">-->
-<!--                                    </div>-->
-<!--                                    <div class="col-md-8 d-flex justify-content-end align-items-end">-->
-<!--                                        <div class="select">-->
-<!--                                            <select>-->
-<!--                                                <option value="1">Select Token</option>-->
-<!--                                                <option value="1">ETH</option>-->
-<!--                                                <option value="2">DAI</option>-->
-<!--                                                <option value="3">USDC</option>-->
-<!--                                                <option value="3">USDT</option>-->
-<!--                                                <option value="3">WBTC</option>-->
-<!--                                                <option value="3">WETH</option>-->
-<!--                                            </select>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
+                                <!--                                <div class="text-center arrows">-->
+                                <!--                                    <img src="images/arrows.png" alt="">-->
+                                <!--                                </div>-->
+                                <!--                                <div class="row widget-form">-->
+                                <!--                                    <div class="col-md-4">-->
+                                <!--                                        <label class="label-one">You receive:</label>-->
+                                <!--                                        <input type="number" value="0">-->
+                                <!--                                    </div>-->
+                                <!--                                    <div class="col-md-8 d-flex justify-content-end align-items-end">-->
+                                <!--                                        <div class="select">-->
+                                <!--                                            <select>-->
+                                <!--                                                <option value="1">Select Token</option>-->
+                                <!--                                                <option value="1">ETH</option>-->
+                                <!--                                                <option value="2">DAI</option>-->
+                                <!--                                                <option value="3">USDC</option>-->
+                                <!--                                                <option value="3">USDT</option>-->
+                                <!--                                                <option value="3">WBTC</option>-->
+                                <!--                                                <option value="3">WETH</option>-->
+                                <!--                                            </select>-->
+                                <!--                                        </div>-->
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
 
                                 <div class="row widget-form d-flex justify-content-center">
                                     <label class="label-one text-center">Choose You profit X:</label>
                                     <ul>
-                                        <li><input type="radio" name="test" id="cb1" />
-                                            <label for="cb1">X2</label>
+                                        <li>
+                                            <input type="radio" name="profit-btn" id="cb1" value="X2"/>
+                                            <label for="cb1" class="profit-btn" value="X2">X2</label>
                                         </li>
-                                        <li><input type="radio" name="test" id="cb2" />
-                                            <label for="cb2">X5</label>
+                                        <li>
+                                            <input type="radio" name="profit-btn" id="cb2" value="X5"/>
+                                            <label for="cb2" class="profit-btn" value="X5">X5</label>
                                         </li>
-                                        <li><input type="radio" name="test" id="cb3" />
-                                            <label for="cb3">X10</label>
+                                        <li>
+                                            <input type="radio" name="profit-btn" id="cb3" value="X10"/>
+                                            <label for="cb3" class="profit-btn" value="X10">X10</label>
                                         </li>
                                     </ul>
-                                    <button class="c-btn btn my-2 my-sm-0" type="submit">Confirm</button>
+                                    <button class="c-btn btn my-2 my-sm-0" type="submit" id="confirm-btn">Confirm</button>
                                 </div>
                             </div>
                         </div>
@@ -87,20 +91,25 @@
 
             </div>
             <div class="col-md-6">
-<!--                <div class="widget-wrapper">-->
-<!--                    <div class="row d-flex justify-content-center align-items-center" style="min-height: 80vh">-->
-<!--                        <div class="col-md-6">-->
-<!--                            <iframe width="500" height="440"-->
-<!--                                    src="https://widgets-uniswap.vercel.app/_renderer.html?_fixtureId=%7B%22path%22%3A%22src%2Fcosmos%2FSwap.fixture.tsx%22%2C%22name%22%3Anull%7D"-->
-<!--                                    frameborder="0"></iframe>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
+                <!--                <div class="widget-wrapper">-->
+                <!--                    <div class="row d-flex justify-content-center align-items-center" style="min-height: 80vh">-->
+                <!--                        <div class="col-md-6">-->
+                <!--                            <iframe width="500" height="440"-->
+                <!--                                    src="https://widgets-uniswap.vercel.app/_renderer.html?_fixtureId=%7B%22path%22%3A%22src%2Fcosmos%2FSwap.fixture.tsx%22%2C%22name%22%3Anull%7D"-->
+                <!--                                    frameborder="0"></iframe>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
 
             </div>
 
         </div>
     </div>
+
+    <div id="spinner">
+        <div class="lds-ripple"><div></div><div></div></div>
+    </div>
 </main>
+<script src="scripts/web3.js"></script>
 </body>
 </html>
