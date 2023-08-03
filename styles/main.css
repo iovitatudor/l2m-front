@@ -261,3 +261,9 @@ label img {
     background-color: rgba(0,0,0,0.9);
     display: none;
 }
+
+#info-popup {
+    display: none;
+    border: 2px solid #FFF;
+    padding: 20px;
+}
